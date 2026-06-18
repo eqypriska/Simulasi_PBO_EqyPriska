@@ -13,9 +13,10 @@ class PendaftaranPrestasi extends Pendaftaran {
         $this->tingkatPrestasi = $tingkatPrestasi;
     }
 
-    // Mengimplementasikan metode abstrak dari parent
+    // Overriding metode hitungTotalBiaya() untuk Jalur Prestasi
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar;
+        // Mendapatkan potongan apresiasi prestasi sebesar Rp50.000
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
     public function tampilkanInfoJalur() {

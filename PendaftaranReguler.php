@@ -14,8 +14,9 @@ class PendaftaranReguler extends Pendaftaran {
         $this->lokasiKampus = $lokasiKampus;
     }
 
-    // Mengimplementasikan metode abstrak dari parent (Wajib isi body di Tahap 5, sekarang set default dulu)
+    // Overriding metode hitungTotalBiaya() untuk Jalur Reguler
     public function hitungTotalBiaya() {
+        // Tarif standar murni tanpa biaya tambahan
         return $this->biayaPendaftaranDasar;
     }
 
